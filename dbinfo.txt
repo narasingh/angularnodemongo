@@ -1,0 +1,26 @@
+account : narasingh
+user : narasingh
+narasinghsays@gmail.com
+Target@111
+
+registerMouseDown
+
+dojo.connect(dojo.byId("myElement"), touch.press, function(event){
+        // handle a mousedown/touchstart event
+    });
+	
+registerMouseDown: function() {
+		if (this.mouseDownConnectHandle == null) {
+			this.mouseDownConnectHandle = dojo.connect(document.documentElement, "onmousedown", this, "handleMouseDown");
+		}
+		
+}	
+
+apiaryApiKey:6fbb0ef60b41be2618fdba45a982f5af  -j apiaryApiName:narasinghmovieapi
+
+https://api.themoviedb.org/movie/6fbb0ef60b41be2618fdba45a982f5af
+
+
+user info
+narasingh
+test321
