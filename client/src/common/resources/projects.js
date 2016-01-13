@@ -1,7 +1,7 @@
 angular.module('resources.projects', ['mongolabResource']);
 angular.module('resources.projects').factory('Projects', ['mongolabResource', function ($mongolabResource) {
 
-  var Projects = $mongolabResource('projects');
+  var Projects = $mongolabResource('tgtcgl_products');
 
   Projects.forUser = function(userId, successcb, errorcb) {
     //TODO: get projects for this user only (!)

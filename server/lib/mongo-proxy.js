@@ -1,6 +1,6 @@
 var url = require('url');
 var qs = require('querystring');
-var https = require('https');
+var https = require('http');
 
 module.exports = function(basePath, apiKey) {
   console.log('Proxying MongoLab at', basePath, 'with', apiKey);
@@ -41,6 +41,7 @@ module.exports = function(basePath, apiKey) {
       var options = mapRequest(req);
       // Create the request to the db
       var dbReq = https.request(options, function(dbRes) {
+        console.log('narasingh');
         var data = "";
         res.headers = dbRes.headers;
         dbRes.setEncoding('utf8');

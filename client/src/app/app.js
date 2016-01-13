@@ -14,7 +14,7 @@ angular.module('app', [
 
 angular.module('app').constant('MONGOLAB_CONFIG', {
   baseUrl: '/databases/',
-  dbName: 'xcart'
+  dbName: 'test'
 });
 
 //TODO: move those messages to a separate module

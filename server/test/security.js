@@ -5,7 +5,7 @@ var config = {
   dbUrl: 'https://api.mongolab.com/api/1/databases',
   apiKey: '4fb51e55e4b02e56a67b0b66',
   dbName: 'ascrum',
-  usersCollection: 'users'
+  usersCollection: 'tgtcgl_users'
 };
 
 function mockUpUser(isAdmin) {

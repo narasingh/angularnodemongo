@@ -2,13 +2,11 @@ var path = require('path');
 
 module.exports = {
   mongo: {
-    //dbUrl: 'https://api.mongolab.com/api/1',            // The base url of the MongoLab DB server
-    dbUrl : 'http://localhost:28017',
-    //apiKey: 'q7f5PCvKUe_0zexQSvk4NteUw-6jnXKw'          // Our MongoLab API key
-    apiKey : '1234'
+    dbUrl: 'https://api.mongolab.com/api/1',            // The base url of the MongoLab DB server
+    apiKey: 'q7f5PCvKUe_0zexQSvk4NteUw-6jnXKw'          // Our MongoLab API key
   },
   security: {
-    dbName: 'test',                                   // The name of database that contains the security information
+    dbName: 'propaudit_v2',                                   // The name of database that contains the security information
     usersCollection: 'tgtcgl_users'                 // The name of the collection contains user information
   },
   server: {

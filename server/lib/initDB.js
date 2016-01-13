@@ -9,7 +9,7 @@ var initDB = {
     initDB.baseUrl = cfg.mongo.dbUrl + '/databases/' + cfg.security.dbName + '/collections/';
     initDB.usersCollection = cfg.security.usersCollection;
   },
-  
+
   checkDocument: function(collection, query, done) {
     var url = initDB.baseUrl + collection + '/';
     console.log("rest.get - " + url);
@@ -21,7 +21,7 @@ var initDB = {
       done(err, data);
     });
   },
-  
+
   createDocument: function(collection, doc, done) {
     var url = initDB.baseUrl + collection + '/';
     console.log("rest.post - " + url);
@@ -32,7 +32,7 @@ var initDB = {
       done(err, data);
     });
   },
-  
+
   deleteDocument: function(collection, docId, done) {
     var url = initDB.baseUrl + collection + '/' + docId;
     console.log("rest.del - " + url);
@@ -43,7 +43,7 @@ var initDB = {
       done(err, data);
     });
   },
-  
+
   addAdminUser: function(done) {
     console.log('*** Admin user properties:', initDB.adminUser);
     console.log('Checking that admin user does not exist...');
@@ -69,4 +69,3 @@ var initDB = {
 };
 
 module.exports = initDB;
-

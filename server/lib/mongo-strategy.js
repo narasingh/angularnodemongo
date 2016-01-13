@@ -2,6 +2,7 @@ var util = require('util');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var rest = require('request');
+var md5 = require('md5');
 
 function MongoDBStrategy(dbUrl, apiKey, dbName, collection) {
   this.dbUrl = dbUrl;
@@ -61,7 +62,7 @@ MongoDBStrategy.prototype.findByEmail = function(email, done) {
 MongoDBStrategy.prototype.verifyUser = function(email, password, done) {
   this.findByEmail(email, function(err, user) {
     if (!err && user) {
-      if (user.password !== password) {
+      if (user.password !== md5(password) ) {
         user = null;
       }
     }

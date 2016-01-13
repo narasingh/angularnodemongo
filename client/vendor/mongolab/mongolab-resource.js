@@ -1,13 +1,12 @@
 angular.module('mongolabResource', []).factory('mongolabResource', ['MONGOLAB_CONFIG','$http', '$q', function (MONGOLAB_CONFIG, $http, $q) {
 
   function MongolabResourceFactory(collectionName) {
-
     var url = MONGOLAB_CONFIG.baseUrl + MONGOLAB_CONFIG.dbName + '/collections/' + collectionName;
     var defaultParams = {};
     if (MONGOLAB_CONFIG.apiKey) {
       defaultParams.apiKey = MONGOLAB_CONFIG.apiKey;
     }
-    
+
     var thenFactoryMethod = function (httpPromise, successcb, errorcb, isArray) {
       var scb = successcb || angular.noop;
       var ecb = errorcb || angular.noop;
